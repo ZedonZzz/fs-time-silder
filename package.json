@@ -1,0 +1,54 @@
+{
+  "_from": "video-time-slider",
+  "_id": "video-time-slider@1.1.0",
+  "_inBundle": false,
+  "_integrity": "sha512-JQBYq5TfW+jK6qinnyDRIDP8nQ0KXO2/4pKKEsf4WDIIW+8cWmxXoTIq/+BcMYzjmH3giA3P0gOuGIIImIhk8A==",
+  "_location": "/video-time-slider",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "video-time-slider",
+    "name": "video-time-slider",
+    "escapedName": "video-time-slider",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmmirror.com/video-time-slider/-/video-time-slider-1.1.0.tgz",
+  "_shasum": "fdb52cbb926777124b749ca4bce71ddb5aa3b70a",
+  "_spec": "video-time-slider",
+  "_where": "D:\\ZdddddWeb\\fswl-edge-video-serve",
+  "author": "",
+  "bundleDependencies": false,
+  "dependencies": {
+    "snabbdom": "^3.0.3"
+  },
+  "deprecated": false,
+  "description": "video-time-slider是一个基于原生js打造的视频回放时间轴组件，本组件适用于任何框架。\r ![image text](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f928d0c8141c4f78b0b893f27f1d566e~tplv-k3u1fbpfcp-watermark.image?)\r ### demonstration\r 打开demo.html就可以直接演示操作了。\r ### 调试\r ```\r npm i\r npm run dev\r ```\r ### Install:\r ```\r npm install video-time-slider --save\r ```\r ### Usage:\r ```\r const timeSliderInstance = initTimeSlider(el,config)\r ```\r #### React Hook:\r ```tsx\r import {useEffect} from 'react';\r import initTimeSlider from 'video-time-slider';\r function App() {\r   useEffect(()=>{\r     initTimeSlider('#timeSlider',{\r       curDaytimeChunkArray:['012200-023000-C','002200-003000-B','001200-002000-A','000000-001000-A'], // 时间段\r       presentSeconds:20,// 当天开始播放秒数\r       timeChunkType:{ // 时间段类型\r         A:'red',\r         B:'yellow',\r         C:'blue'\r       },\r       speed:1, // 速度\r       isInitialPlay:true, // 是否初始化后进行播放\r      })\r   })\r   return (\r     <>\r      <div id='timeSlider'></div>\r     </>\r   );\r }\r export default App;\r ```\r #### Vue3:\r ```vue\r <script setup lang=\"ts\">\r import initTimeSlider from 'video-time-slider';\r import { nextTick } from 'vue';\r nextTick(()=>{\r   initTimeSlider('#timeSlider',{\r       curDaytimeChunkArray:['012200-023000-C','002200-003000-B','001200-002000-A','000000-001000-A'],\r       presentSeconds:20,\r       timeChunkType:{\r         A:'red',\r         B:'yellow',\r         C:'blue'\r       },\r       speed:1,\r       isInitialPlay:true,\r   })\r })\r </script>\r <template>\r    <div id='timeSlider'></div>\r </template>\r ```\r #### Script:\r ```js\r <script src=\"../dist/main.js\"></script>\r <script>\r initTimeSlider('#timeSlider',{\r   curDaytimeChunkArray:['012200-023000-C','002200-003000-B','001200-002000-A','000000-001000-A'],\r   presentSeconds:20,\r   timeChunkType:{\r     A:'red',\r     B:'yellow',\r     C:'blue'\r   },\r   speed:1,\r   isInitialPlay:true,\r  })\r </script>\r ```\r ### config：\r |参数|描述|类型|可选值|默认值|\r |:--|:--:|:--:|:--:|--:|\r |curDaytimeChunkArray|当天的时间块,每一项格式为`startTime-endTime-type`|Array|必填| --|\r |presentSeconds|开始播放时间,这个时间为秒数，而且必须在curDaytimeChunkArray时间段内|number| 必填| --|\r |timeChunkType|时间段类型,属性名为类型与curDaytimeChunkArray对应，属性值为渲染到时间轴上的颜色|object|必填 | --|\r |speed|时间线滚动的速率|number| --| 1|\r |isInitialPlay|是否初始化后进行播放,如果设置为false,可以调用实例的timeLinePlay进行播放|boolean| --| false|\r |onClick|时间轴点击回调事件|functon||接受两个参数，第一个参数是点击前的时间，第二个参数是点击后的时间|\r |onMove|时间轴开始拖动回调事件|function|||\r |onMouseDown|时间轴mousedown回调事件|function|||\r ### Method(instance):",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "5.2.6",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.2",
+    "style-loader": "2.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
+  },
+  "license": "ISC",
+  "main": "./dist/esm.js",
+  "name": "video-time-slider",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.1.0"
+}

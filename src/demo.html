@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../dist/main.js"></script>
+  </head>
+
+  <body>
+    <div id="timeSlider"></div>
+  </body>
+  <script>
+    let timeSliderInstance = new initTimeSlider('#timeSlider', {
+      curDaytimeChunkArray: [],
+      presentSeconds: 20,
+      timeChunkType: {
+        A: '#6390fd',
+        B: 'yellow',
+        C: 'blue',
+      },
+      speed: 1,
+      isInitialPlay: true,
+      onClick(oldSeconds, newSeconds) {
+        console.log('onClick', oldSeconds, newSeconds)
+      },
+      onMove() {
+        console.log('onMove')
+      },
+      onMouseDown() {
+        console.log('onM ousedown')
+      },
+    })
+    // setInterval(() => {
+    //   let now = new Date()
+    //   // 时间转换为秒
+    //   let seconds =
+    //     now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds()
+    //     console.log(seconds)
+    //   timeSliderInstance.presentSeconds = seconds // 设置时间线的时间
+    //   timeSliderInstance.setTimeLineLeft() // 设置时间线的位置
+    //   timeSliderInstance.timeLinePlay()
+    // }, 500)
+  </script>
+</html>
