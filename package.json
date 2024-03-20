@@ -1,30 +1,4 @@
 {
-  "_from": "video-time-slider",
-  "_id": "video-time-slider@1.1.0",
-  "_inBundle": false,
-  "_integrity": "sha512-JQBYq5TfW+jK6qinnyDRIDP8nQ0KXO2/4pKKEsf4WDIIW+8cWmxXoTIq/+BcMYzjmH3giA3P0gOuGIIImIhk8A==",
-  "_location": "/video-time-slider",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "video-time-slider",
-    "name": "video-time-slider",
-    "escapedName": "video-time-slider",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
-  },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "https://registry.npmmirror.com/video-time-slider/-/video-time-slider-1.1.0.tgz",
-  "_shasum": "fdb52cbb926777124b749ca4bce71ddb5aa3b70a",
-  "_spec": "video-time-slider",
-  "_where": "D:\\ZdddddWeb\\fswl-edge-video-serve",
-  "author": "",
-  "bundleDependencies": false,
   "dependencies": {
     "snabbdom": "^3.0.3"
   },

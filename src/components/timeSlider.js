@@ -159,7 +159,7 @@ class timeSlider extends CommonUtils {
        }catch(e){
        }
       }
-      if (that.isMouseDown && this.precision !== 3600) {
+      if (that.isMouseDown) {
         let offsetX = e.offsetX - this.startX;
         let isDragToLeft = offsetX < 0
         let isDragToRight = offsetX > 0
